@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+        //Задание 1,2
         int clientOS = 0; // 0 - iOS, 1 - Android
         int clientDeviceYear = 2014;
 
