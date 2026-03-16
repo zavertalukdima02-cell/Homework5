@@ -1,36 +1,27 @@
 public class Main {
     public static void main(String[] args) {
-        int clientOS = 1;
+        System.out.println("Задача 1");
+        int clientOS = 0;
         if (clientOS == 0) {
-            System.out.println("Установите версию приложения для iOS по ссылке" + "\n");
+            System.out.println("Установите версию приложения для iOS по ссылке:");
         } else if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android  по ссылке:");
         } else {
-            System.out.println("Операционная система не опознана" + "\n");
+            System.out.println("Недопустимый ввод данных");
         }
-        int clientDeviceYear = 2010;
-        if (clientDeviceYear < 2015) {
-            switch (clientOS) {
-                case 0:
-                    System.out.println("Установите облегченную версию приложения для iOS по ссылке" + "\n");
-                    break;
-                case 1:
-                    System.out.println("Установите облегченную версию приложения для Android по ссылке" + "\n");
-                    break;
-                default:
-                    System.out.println("Операционная система не опознана" + "\n");
-            }
+        System.out.println("Задача 2");
+        short clientDeviceYear = 2020;
+        if (clientOS == 0 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке:");
+        } else if (clientOS == 1 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке:");
+        } else if (clientOS == 0 && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке:");
+        } else if (clientOS == 1 && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для Android  по ссылке:");
         } else {
-            switch (clientOS) {
-                case 0:
-                    System.out.println("Установите версию приложения для iOS по ссылке" + "\n");
-                    break;
-                case 1:
-                    System.out.println("Установите версию приложения для Android по ссылке" + "\n");
-                    break;
-                default:
-                    System.out.println("Операционная система не опознана" + "\n");
-            }
-        }
+        System.out.println("Недопустимый ввод данных");
+    }
         System.out.println("Задача 3");
         int year = 2026;
         if (year >= 1584 && year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
@@ -41,7 +32,7 @@ public class Main {
         System.out.println("Задача 4");
         int deliveryDistance = 95;
         int dayDelivery = 1;
-        if (deliveryDistance <= 20) {
+        if (deliveryDistance <= 20 && deliveryDistance >0)  {
             System.out.println("Потребуется дней: " + dayDelivery + "\n");
         } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
             dayDelivery = dayDelivery + 1;
